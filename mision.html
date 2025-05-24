@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Misión - Servidatos OP</title>
+  <style>
+    @font-face {
+      font-family: 'KlavikaBd';
+      src: url('fonts/KlavikaBd.otf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Biome';
+      src: url('fonts/Biome.ttf') format('truetype');
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Biome', sans-serif;
+      background-color: #fefae0;
+      color: #1e1e1e;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #a86e3c;
+    }
+
+    header img {
+      height: 60px;
+      margin-right: 15px;
+    }
+
+    header h1 {
+      color: white;
+      font-size: 28px;
+      font-family: 'KlavikaBd', sans-serif;
+    }
+
+    nav {
+      background-color: #fff3c4;
+      border-bottom: 2px solid #a86e3c;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+
+    nav .nav-item {
+      text-align: center;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    nav .nav-item:hover {
+      transform: scale(1.05);
+      filter: brightness(0.85);
+    }
+
+    nav .nav-item img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 5px;
+    }
+
+    nav .nav-item span {
+      font-weight: bold;
+      font-size: 14px;
+      color: #5d3a00;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      background-color: #c7b8a4;
+      border-radius: 15px;
+      padding: 20px;
+      border: 3px solid #5d3a00;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .image-section {
+      flex: 1 1 350px;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .image-section img {
+      max-width: 100%;
+      border-radius: 20px;
+    }
+
+    .text-section {
+      flex: 1 1 500px;
+      padding: 10px 20px;
+    }
+
+    h2 {
+      font-family: 'KlavikaBd';
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-family: 'KlavikaBd';
+      font-size: 34px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      text-align: justify;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #5d3a00;
+      color: white;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<audio id="bg-audio" autoplay loop muted>
+  <source src="audio/fondo.mp3" type="audio/mpeg">
+  Tu navegador no soporta audio HTML5.
+</audio>
+
+<button onclick="activarAudio()" style="position: fixed; bottom: 20px; right: 20px; padding: 10px; border-radius: 10px; background-color: #5d3a00; color: white; border: none; font-weight: bold; z-index: 1000;">
+  🔊 Activar Música
+</button>
+
+<script>
+  const audio = document.getElementById('bg-audio');
+  const boton = document.querySelector('button');
+
+  function activarAudio() {
+    audio.muted = false;
+    audio.play();
+    boton.style.display = 'none'; // Oculta el botón después de activar
+  }
+
+  // Intenta reproducir al cargar (silenciado por defecto)
+  window.addEventListener('DOMContentLoaded', () => {
+    audio.play();
+  });
+</script>
+
+<body>
+
+  <header>
+    <img src="images/logo.png" alt="Logo Servidatos OP">
+    <h1>SERVIDATOS OP</h1>
+  </header>
+
+  <nav>
+  <a class="nav-item" href="index.html" style="text-decoration: none; color: inherit;">
+    <img src="icons/inicio.png" alt="Inicio" />
+    <span>INICIO</span>
+  </a>
+  <a class="nav-item" href="servicios.html" style="text-decoration: none; color: inherit;">
+    <img src="icons/servicios.png" alt="Servicios" />
+    <span>SERVICIOS</span>
+  </a>
+  <a class="nav-item" href="mision.html" style="text-decoration: none; color: inherit;">
+    <img src="icons/mision.png" alt="Misión" />
+    <span>MISIÓN</span>
+  </a>
+  <a class="nav-item" href="vision.html" style="text-decoration: none; color: inherit;">
+    <img src="icons/vision.png" alt="Visión" />
+    <span>VISIÓN</span>
+  </a>
+  <a class="nav-item" href="https://juan-garavito.github.io/document-management/" style="text-decoration: none; color: inherit;">
+    <img src="icons/gestion.png" alt="Gestión Documental" />
+    <span>GESTIÓN DOCUMENTAL</span>
+  </a>
+  <a class="nav-item" href="#">
+    <img src="icons/contacto.png" alt="Contáctenos" />
+    <span>CONTACTENOS</span>
+  </a>
+</nav>
+
+  <section>
+    <div class="image-section">
+      <img src="images/mision.png" alt="Misión Servidatos OP">
+    </div>
+    <div class="text-section">
+      <h2>MISIÓN DE</h2>
+      <h1>SERVIDATOS OP</h1>
+      <p>
+        Brindar a nuestros clientes un servicio integral, eficiente y de alta calidad, ofreciendo soluciones inmediatas a las diversas necesidades que surgen en los procesos de consultoría, digitalización, manejo de archivos, procesamiento de datos y mantenimiento tecnológico. Contamos con un equipo humano altamente capacitado, comprometido con la excelencia y apoyado en herramientas tecnológicas de última generación. Nuestro enfoque se basa en una planeación estratégica de ingeniería y administración, lo que nos permite desarrollar soluciones rápidas, seguras y eficaces en todos los ámbitos tecnológicos y administrativos, garantizando así la satisfacción total de nuestros usuarios y el fortalecimiento continuo de sus procesos institucionales.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Servidatos OP. Todos los derechos reservados.
+  </footer>
+</body>
+<div id="juego" style="position: fixed; bottom: 80px; right: 20px; background: #fff3c4; border: 2px solid #a86e3c; border-radius: 10px; padding: 10px; z-index: 1000;">
+  <button id="botonJugar" style="background: #5d3a00; color: white; border: none; padding: 8px 12px; border-radius: 8px; font-weight: bold;">🎮 Jugar</button>
+  <canvas id="canvasJuego" width="300" height="100" style="display:none; margin-top:10px;"></canvas>
+</div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const canvas = document.getElementById('canvasJuego');
+    const ctx = canvas.getContext('2d');
+    const boton = document.getElementById('botonJugar');
+
+    const dino = { x: 10, y: 60, vy: 0, jumping: false };
+    const obstaculo = { x: 300, y: 60 };
+
+    boton.addEventListener('click', () => {
+      canvas.style.display = 'block';
+      boton.style.display = 'none';
+      document.addEventListener('keydown', () => {
+        if (!dino.jumping) {
+          dino.vy = -8;
+          dino.jumping = true;
+        }
+      });
+      requestAnimationFrame(update);
+    });
+
+    function update() {
+      ctx.clearRect(0, 0, 300, 100);
+
+      // dino
+      dino.y += dino.vy;
+      dino.vy += 0.5;
+      if (dino.y >= 60) {
+        dino.y = 60;
+        dino.vy = 0;
+        dino.jumping = false;
+      }
+      ctx.fillStyle = '#5d3a00';
+      ctx.fillRect(dino.x, dino.y, 20, 20);
+
+      // obstaculo
+      obstaculo.x -= 4;
+      if (obstaculo.x < -20) {
+        obstaculo.x = 300 + Math.random() * 200;
+      }
+      ctx.fillStyle = '#a86e3c';
+      ctx.fillRect(obstaculo.x, obstaculo.y, 20, 20);
+
+      // colisión
+      if (
+        obstaculo.x < dino.x + 20 &&
+        obstaculo.x + 20 > dino.x &&
+        dino.y + 20 > obstaculo.y
+      ) {
+        ctx.fillStyle = 'red';
+        ctx.font = '16px Biome';
+        ctx.fillText('💀 Game Over', 100, 50);
+        return;
+      }
+
+      requestAnimationFrame(update);
+    }
+  });
+</script>
+
+</html>
